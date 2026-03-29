@@ -683,15 +683,45 @@ body {
     color: #372e3c; /* Heritage Charcoal */
 }
 
-/* Ensure it stacks on mobile devices */
+/* =========================================
+   FORM MOBILE ADJUSTMENTS (Under 600px)
+   ========================================= */
 @media (max-width: 600px) {
-    .leader-card {
+    
+    .contact-section {
+        padding: 50px 3%; /* Reduced huge paddings for phones */
+    }
+
+    /* Force the inputs to stack vertically and take full width */
+    .form-wrapper {
+        display: flex;
         flex-direction: column;
+        gap: 15px; /* Adds equal space between every input box */
+        width: 100%;
+        max-width: 100%; /* Prevents horizontal scrolling */
+    }
+
+    /* Set the specific input boxes to 100% width */
+    .church-form input, 
+    .church-form textarea {
+        width: 100%;
+        margin: 0;
+        padding: 15px; /* Matches your style's internal padding */
+    }
+
+    /* Adjust the text area height for better fit */
+    .church-form textarea {
+        height: 200px; /* Instead of fixed rows, use a height for better layout control */
+    }
+
+    /* Ensure the button is also full-width and centered */
+    .church-form .cta-vibrant {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
         text-align: center;
     }
-    .leader-image-box {
-        margin-right: 0;
-        margin-bottom: 20px;
+}
     }
 }
 /* LEADER ACTION BUTTONS */
