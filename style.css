@@ -590,30 +590,76 @@ body {
     font-style: normal; /* Keeps the name bold and upright */
 }
 /* CONTACT SECTION STYLING */
+/* --- CONTACT SECTION LAYOUT --- */
 .contact-section {
-    padding: 100px 5%;
-    background-color: #ffffff;
+    padding: 80px 5%;
+    background-color: #f9f7f2;
+    text-align: center;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 50px;
-    max-width: 1200px;
+.church-form {
+    max-width: 800px;
     margin: 40px auto 0;
-    text-align: left;
+    text-align: left; /* Keeps labels aligned left for readability */
 }
 
-.contact-info h3 {
-    color: #b71c1c; /* Heritage Crimson */
-    font-size: 1.1rem;
+.form-main-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Desktop: Name and Email side-by-side */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #372e3c;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    margin-bottom: 5px;
 }
 
-.contact-info p {
-    margin-bottom: 25px;
-    color: #372e3c; /* Heritage Charcoal */
+.church-form input, 
+.church-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #edc9a1; /* Using your Sandy Beige */
+    border-radius: 8px;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.church-form input:focus, 
+.church-form textarea:focus {
+    outline: none;
+    border-color: #b71c1c; /* Crimson focus border */
+}
+
+/* --- MOBILE RESPONSIVE FIX --- */
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr; /* Stacks Name and Email on top of each other */
+    }
+
+    .contact-section {
+        padding: 50px 20px;
+    }
+
+    .cta-vibrant {
+        width: 100%; /* Full width button for easy thumb-tapping */
+        padding: 20px;
+    }
 }
 
 /* MAP CONTAINER STYLING */
